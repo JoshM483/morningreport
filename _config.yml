@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 repository: "JoshM483/morningreport"
 
 # Build settings
+timezone: America/New_York   # may need to update github actions timezone to make this work right
 plugins:
   - jekyll-feed
   - jekyll-sitemap

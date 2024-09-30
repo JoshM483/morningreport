@@ -1,50 +1,50 @@
 ---
 layout: page
-title: Morning Report
+title: 
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/slate/bootstrap.min.css">
 
+
+
+
 <!-- Banner -->
-<div class="container">
-  <div class="jumbotron text-center bg-primary text-white">
-    <h1>Your Morning Report</h1>
-  </div>
+<div class="text-center bg-primary text-white py-4 mb-5">
+  <h1 class="display-4">{{ site.time | date: "%A" }}'s Morning Report</h1>
 </div>
 
 <!-- Main Content -->
 <div class="container">
-  {% for article in articles %}
-    <div class="card mb-3">
-      <!-- Article Title -->
-      <h3 class="card-header">{{ article.title | default: 'No title available' }}</h3>
-
-      <!-- Source -->
-      <div class="card-body">
-        <h5 class="card-title text-muted">{{ article.source | default: 'Unknown Source' }}</h5>
-      </div>
-
+  {% for article in site.data.articles %}
+    <div class="card mb-5">
       <!-- Optional Article Image -->
-      {% if article.image_url %}
-        <img src="{{ article.image_url }}" class="card-img-top" alt="Article Image">
+      {% if article.image %}
+        <img src="{{ article.image }}" class="card-img-top" alt="Article Image">
       {% endif %}
 
-      <!-- Summary Text -->
-      <div class="card-body">
-        <p class="card-text">{{ article.summary | default: 'No summary available.' }}</p>
+      <!-- Article Title -->
+      <div class="card-header">
+        <h3 class="card-title">{{ article.title | default: 'Unable to get title' }}</h3>
       </div>
 
-      <!-- Link to the Full Article -->
+      <!-- Card Body -->
       <div class="card-body">
-        {% if article.url %}
-          <a href="{{ article.url }}" class="card-link" target="_blank">Read Full Article</a>
-        {% else %}
-          <span class="text-muted">No link available.</span>
-        {% endif %}
+        <!-- Source -->
+          <h6 class="card-subtitle mb-2">{{ article.source | default: 'Unable to get Source' }}</h6>
+
+        <!-- Summary Text -->
+          <p class="card-text">{{ article.summary | markdownify | default: 'No summary available.' }}</p>
+
+        <!-- Link to the Full Article -->
+          {% if article.url %}
+            <a href="{{ article.url }}" class="card-link" target="_blank">Read Full Article Here</a>
+          {% else %}
+            <span class="text-muted">Source URL missing.</span>
+          {% endif %}
       </div>
 
       <!-- Publication Date -->
       <div class="card-footer text-muted">
-        {{ article.published_date | default: 'Publication date unknown' }}
+        {{ article.date | default: 'Unable to get publication date' }}
       </div>
     </div>
   {% endfor %}

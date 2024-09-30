@@ -1,0 +1,20 @@
+[
+    {
+        "date": "09-30-24", 
+        "title": "news article title", 
+        "body": "Body provided by the search?(the source?)", 
+        "url": "https://www.duckduckgo.com", 
+        "image": "https://source_img_url.jpg", 
+        "source": "Source name such as BBC or CNN", 
+        "summary": "- Bulletpoint summary.\n- Using newline characters.\n- So be mindful of the formatting and use markdownify"
+    },
+    {
+        "date": "09-30-24", 
+        "title": "news article title", 
+        "body": "Body provided by the search?(the source?)", 
+        "url": "https://www.duckduckgo.com", 
+        "image": "https://source_img_url.jpg", 
+        "source": "Source name such as BBC or CNN", 
+        "summary": "- Bulletpoint summary.\n- Using newline characters.\n- So be mindful of the formatting and use markdownify"
+    }
+]

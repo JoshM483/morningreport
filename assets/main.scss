@@ -11,7 +11,18 @@
 
 /* Place this in a <style> tag in the head or an external CSS file */
 .card {
-    max-width: 800px;
-    margin: auto;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text-center {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
