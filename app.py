@@ -64,7 +64,7 @@ def sort_and_filter(artricles):
 
 def format_date(date_str):
     date_obj = datetime.fromisoformat(date_str)
-    date = date_obj.strftime('%m-%d-%y %H:%M')
+    date = date_obj.strftime('%m-%d-%y')
     return date
 
 
