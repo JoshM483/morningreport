@@ -41,3 +41,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - update_boostrap.sh
+  - "_posts/0000-00-00-welcome-to-jekyll.markdown.erb"
