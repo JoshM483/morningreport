@@ -85,7 +85,7 @@ def update_data():
         article['date'] = format_date(article['date'])
         print(f"Article: {article['title']}\nDate: {article['date']}\nSummary: {summary}")
 
-    with open('_data/news_data.json', 'w') as f:
+    with open('_data/articles.json', 'w') as f:
         json.dump(articles, f, indent=2)
 
 if __name__ == '__main__':
